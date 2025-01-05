@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,10 +16,11 @@ export default function Header() {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             <Link href="#about" className="hover:text-blue-600">About</Link>
             <Link href="#projects" className="hover:text-blue-600">Projects</Link>
             <Link href="#contact" className="hover:text-blue-600">Contact</Link>
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -38,6 +40,9 @@ export default function Header() {
             <Link href="#about" className="block py-2 hover:text-blue-600">About</Link>
             <Link href="#projects" className="block py-2 hover:text-blue-600">Projects</Link>
             <Link href="#contact" className="block py-2 hover:text-blue-600">Contact</Link>
+            <div className="py-2">
+              <ThemeToggle />
+            </div>
           </div>
         )}
       </nav>

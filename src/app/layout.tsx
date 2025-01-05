@@ -10,8 +10,35 @@ import ScrollProgress from '@/components/ui/ScrollProgress'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'VK Portfolio',
-  description: 'Personal portfolio showcasing my work and skills',
+  title: 'Victor Koech | Data Analyst & Full Stack Developer',
+  description: 'Dynamic and versatile Data Analyst specializing in Python, data visualization, and full stack development. Creating impactful solutions through data-driven insights and web applications.',
+  keywords: 'Data Analyst, Full Stack Developer, Python, Data Visualization, React, Next.js, TypeScript, Web Development',
+  openGraph: {
+    title: 'Victor Koech | Data Analyst & Full Stack Developer',
+    description: 'Dynamic and versatile Data Analyst with expertise in Python programming and full stack development.',
+    url: 'https://victorkoech.com',
+    siteName: 'Victor Koech Portfolio',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Victor Koech - Data Analyst & Full Stack Developer'
+      },
+    ],
+    locale: 'en-US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Victor Koech | Data Analyst & Full Stack Developer',
+    description: 'Dynamic and versatile Data Analyst with expertise in Python programming and full stack development.',
+    creator: '@victorkoech',
+  }
 }
 
 export default function RootLayout({

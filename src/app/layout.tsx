@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Script from 'next/script'
 import { ThemeProvider } from '@/context/ThemeContext'
+import ScrollToTop from '@/components/ui/ScrollToTop'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <ScrollToTop />
           </div>
         </body>
       </ThemeProvider>

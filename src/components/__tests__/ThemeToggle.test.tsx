@@ -1,4 +1,5 @@
 import { render, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
 import ThemeToggle from '../ui/ThemeToggle'
 import { ThemeProvider } from '@/context/ThemeContext'
 
@@ -13,7 +14,6 @@ describe('ThemeToggle', () => {
     const button = getByRole('button')
     fireEvent.click(button)
     
-    // Verify theme class is added to html element
     expect(document.documentElement.classList.contains('dark')).toBeTruthy()
   })
 })

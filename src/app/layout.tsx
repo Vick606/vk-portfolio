@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer'
 import Script from 'next/script'
 import { ThemeProvider } from '@/context/ThemeContext'
 import ScrollToTop from '@/components/ui/ScrollToTop'
+import ScrollProgress from '@/components/ui/ScrollProgress'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       </head>
       <ThemeProvider>
         <body className={`${inter.className} bg-white dark:bg-gray-900`}>
+          <ScrollProgress />
           <div className="min-h-screen">
             <Header />
             {children}

@@ -15,7 +15,6 @@ export default function Header() {
             VK
           </Link>
           
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="#about" className="hover:text-blue-600">About</Link>
             <Link href="#projects" className="hover:text-blue-600">Projects</Link>
@@ -23,7 +22,6 @@ export default function Header() {
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
           <button 
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -34,7 +32,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <Link href="#about" className="block py-2 hover:text-blue-600">About</Link>

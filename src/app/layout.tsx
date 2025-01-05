@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Script from 'next/script'
+import { ThemeProvider } from '@/context/ThemeContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,13 +22,15 @@ export default function RootLayout({
       <head>
         <Script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" />
       </head>
-      <body className={`${inter.className} bg-white dark:bg-gray-900`}>
-        <div className="min-h-screen">
-          <Header />
-          {children}
-          <Footer />
-        </div>
-      </body>
+      <ThemeProvider>
+        <body className={`${inter.className} bg-white dark:bg-gray-900`}>
+          <div className="min-h-screen">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </body>
+      </ThemeProvider>
     </html>
   )
 }
